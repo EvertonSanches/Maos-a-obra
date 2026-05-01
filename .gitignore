@@ -1,8 +1,55 @@
-/venv
-.venv/
+# =========================
+# 🐍 Python (Back-end)
+# =========================
 __pycache__/
+*.pyc
+*.pyo
+*.pyd
+
+venv/
+.venv/
+.env
+
 .pytest_cache/
 
+# Banco local
+*.db
+
+# =========================
+# ⚛️ Node / React (Front-end)
+# =========================
 node_modules/
 dist/
-.env
+dist-ssr/
+
+.env.local
+.env.*.local
+
+# Logs
+logs/
+*.log
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+pnpm-debug.log*
+lerna-debug.log*
+
+# =========================
+# 🧠 Editor / Sistema
+# =========================
+.vscode/*
+!.vscode/extensions.json
+
+.idea/
+
+.DS_Store
+Thumbs.db
+
+# Windows
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+
+# Outros
+*.sw?
