@@ -6,12 +6,18 @@ type OrderCardProps = {
 
 function OrderCard({ order }: OrderCardProps) {
     return (
-        <div>
-            <h3>
-                {order.title}
-            </h3>
+        <div style={{ border: '1px solid #ccc', padding: '16px', marginBottom: '16px'}}>
+            <h3>{order.title}</h3>
+
             <p>{order.description}</p>
-            <span>{order.status}</span>
+
+            <div>
+                <span>Status: {order.status}</span>
+            </div>
+
+            {order.estimatedValue && (
+                <p>Valor estimado: R$ {order.estimatedValue.toFixed(2)}</p>
+            )}
         </div>
     )
 }
