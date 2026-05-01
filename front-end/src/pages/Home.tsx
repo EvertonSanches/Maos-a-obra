@@ -1,4 +1,6 @@
 import type { Order } from "../types/Order"
+import OrderCard from "../components/OrderCard"
+
 function Home() {
     const orders: Order[] = [
     {
@@ -18,14 +20,11 @@ function Home() {
     }
 ]   
     return (<div>
-    <h1>Home</h1>
+    <h1>Serviços</h1>
+    <br />
 
     {orders.map(order => (
-        <div key={order.id}>
-            <h3>{order.title}</h3>
-            <p>{order.description}</p>
-            <span>{order.status}</span>
-            </div>
+        <OrderCard key={order.id} order={order} />
     ))}
     </div>
     )
