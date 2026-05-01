@@ -1,4 +1,6 @@
+import { useNavigate } from 'react-router-dom'
 function Login() {
+    const navigate = useNavigate()
     return (
         <div>
             <h1>Login</h1>
@@ -8,7 +10,7 @@ function Login() {
             <input type="password" placeholder="Senha" />
             <br />
 
-            <button>Entrar</button>
+            <button onClick={() => navigate('/home')}>Entrar</button>
         </div>
     )
 }
